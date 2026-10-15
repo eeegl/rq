@@ -1,0 +1,30 @@
+{
+    "name": "rq",
+    "version": "0.1.0",
+    "description": "Requirements register: ids, priorities, dependencies; a live page and a customer PDF",
+    "type": "module",
+    "bin": {
+        "rq": "./dist/bin/rq.js"
+    },
+    "engines": {
+        "node": ">=24"
+    },
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json",
+        "prepare": "tsc -p tsconfig.build.json",
+        "check": "tsc && biome check && node --test"
+    },
+    "dependencies": {
+        "marked": "^18.0.6"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.4.12",
+        "@types/node": "^24.0.0",
+        "typescript": "^5.8.3"
+    },
+    "files": [
+        "dist"
+    ],
+    "license": "MIT",
+    "repository": "github:eeegl/rq"
+}
