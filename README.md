@@ -14,6 +14,14 @@ rq pdf --subtitle "Project" --client "Customer AB" --author "Us" \
        --doc-version 1.0 --classification Confidential
 ```
 
+As a project dev dependency instead of global:
+
+```sh
+pnpm add -D rq@github:eeegl/rq
+# and in pnpm-workspace.yaml, so pnpm lets it build:
+#   onlyBuiltDependencies: [rq]
+```
+
 `rq help` lists every command. The PDF needs Chrome, Chromium or Edge
 (`CHROME_PATH` to override). It includes approved and proposed requirements
 (proposed ones are marked, and the cover says draft); `--status approved`
